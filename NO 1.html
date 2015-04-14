@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Include Google Maps JS API -->
+<script type="text/javascript"
+src="https://maps.googleapis.com/maps/api/js">
+</script>
+
+<style type="text/css">
+#mapDiv { width: 800px; height: 500px; }
+</style>
+
+<script type="text/javascript">
+	var map;
+	function initMap() {
+		google.maps.visualRefresh = true;
+		var mapOptions = {
+			center: new google.maps.LatLng(-7.569589, 110.805808),
+			zoom: 18,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var mapElement = document.getElementById('mapDiv');
+		map = new google.maps.Map(mapElement, mapOptions);
+	}
+	google.maps.event.addDomListener(window, 'load', initMap);
+</script>
+</head>
+<body>
+<b>Nomor 1 </b>
+<div id="border">
+<div id="mapDiv"></div>
+</div>
+</body>
+</html>
